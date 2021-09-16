@@ -2,8 +2,12 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
- 
+var isValid = function(s) 
+{
+    if(s.length%2!=0)
+    {
+        return false
+    }
     let stack = [];
     for (var i=0;i<s.length;i++)
     {
@@ -24,19 +28,6 @@ var isValid = function(s) {
             return false;
         }
     }
-    if(stack.length>0)
-    {
-        return false
-    }
-    else
-    {
-        return true;
-    }
-    
-   
+    return stack.length==0;
     
 };
-//20
-//1
-//349
-//387
