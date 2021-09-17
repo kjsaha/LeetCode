@@ -4,10 +4,6 @@
  */
 var isValid = function(s) 
 {
-    if(s.length%2!=0)
-    {
-        return false
-    }
     let stack = [];
     for (var i=0;i<s.length;i++)
     {
@@ -28,6 +24,6 @@ var isValid = function(s)
             return false;
         }
     }
-    return stack.length==0;
+    return stack.length===0;
     
 };
